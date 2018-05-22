@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09B5641FC7D9CE437AC9B15D /* Pods_MyRearGuardHeartMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2798EC9E3F069B82A320F04F /* Pods_MyRearGuardHeartMonitor.framework */; };
+		CB5F644D702B09B00DCB2C3F /* Pods_MyRearGuardHeartRateMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B61F00EBCE5D8031C996157 /* Pods_MyRearGuardHeartRateMonitor.framework */; };
+		F543850220B46A44004F98AA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F543850120B46A44004F98AA /* SignInViewController.swift */; };
 		F547087E20AEE0220038377B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F547087D20AEE0220038377B /* AppDelegate.swift */; };
-		F547088020AEE0220038377B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F547087F20AEE0220038377B /* ViewController.swift */; };
 		F547088320AEE0220038377B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F547088120AEE0220038377B /* Main.storyboard */; };
 		F547088520AEE0230038377B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F547088420AEE0230038377B /* Assets.xcassets */; };
 		F547088820AEE0230038377B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F547088620AEE0230038377B /* LaunchScreen.storyboard */; };
 		F547089320AEE0230038377B /* MyRearGuardHeartRateMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F547089220AEE0230038377B /* MyRearGuardHeartRateMonitorTests.swift */; };
 		F547089E20AEE0230038377B /* MyRearGuardHeartRateMonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F547089D20AEE0230038377B /* MyRearGuardHeartRateMonitorUITests.swift */; };
+		F54708B020AEE8EF0038377B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54708AF20AEE8EF0038377B /* HealthKit.framework */; };
+		F54708BA20AF0E010038377B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54708B920AF0E010038377B /* MasterViewController.swift */; };
+		F54708BC20AF0E2A0038377B /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54708BB20AF0E2A0038377B /* HealthKitSetupAssistant.swift */; };
+		F54708F020B264ED0038377B /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54708EF20B264ED0038377B /* ProfileDataStore.swift */; };
+		F54708F420B27B960038377B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54708F320B27B960038377B /* ProfileViewController.swift */; };
+		F54708F620B281B50038377B /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54708F520B281B40038377B /* UserHealthProfile.swift */; };
+		F54708F820B284170038377B /* HKBiologicalSex+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54708F720B284170038377B /* HKBiologicalSex+StringRepresentation.swift */; };
+		F54708FA20B284240038377B /* HKBloodType+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54708F920B284240038377B /* HKBloodType+StringRepresentation.swift */; };
+		F54708FC20B38E290038377B /* HeartBeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54708FB20B38E290038377B /* HeartBeatViewController.swift */; };
+		F547090220B40FAD0038377B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F547090120B40FAD0038377B /* GoogleService-Info.plist */; };
+		F547090420B4134B0038377B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F547090320B4134B0038377B /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,12 +44,31 @@
 			remoteGlobalIDString = F547087920AEE0220038377B;
 			remoteInfo = MyRearGuardHeartRateMonitor;
 		};
+		F54708D520AF0E990038377B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F547087220AEE0220038377B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F54708C020AF0E980038377B;
+			remoteInfo = MyRearGuardHeartMonitor;
+		};
+		F54708E020AF0E9A0038377B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F547087220AEE0220038377B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F54708C020AF0E980038377B;
+			remoteInfo = MyRearGuardHeartMonitor;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2798EC9E3F069B82A320F04F /* Pods_MyRearGuardHeartMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyRearGuardHeartMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EFF508A32BE4FB0787BDF39 /* Pods-MyRearGuardHeartMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRearGuardHeartMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyRearGuardHeartMonitor/Pods-MyRearGuardHeartMonitor.release.xcconfig"; sourceTree = "<group>"; };
+		69A3AF797C3620671D745808 /* Pods-MyRearGuardHeartRateMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRearGuardHeartRateMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyRearGuardHeartRateMonitor/Pods-MyRearGuardHeartRateMonitor.debug.xcconfig"; sourceTree = "<group>"; };
+		8B61F00EBCE5D8031C996157 /* Pods_MyRearGuardHeartRateMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyRearGuardHeartRateMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF3DEA343424EF0136578E8 /* Pods-MyRearGuardHeartRateMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRearGuardHeartRateMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyRearGuardHeartRateMonitor/Pods-MyRearGuardHeartRateMonitor.release.xcconfig"; sourceTree = "<group>"; };
+		F543850120B46A44004F98AA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F547087A20AEE0220038377B /* MyRearGuardHeartRateMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRearGuardHeartRateMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F547087D20AEE0220038377B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F547087F20AEE0220038377B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F547088220AEE0220038377B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F547088420AEE0230038377B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F547088720AEE0230038377B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +79,22 @@
 		F547089920AEE0230038377B /* MyRearGuardHeartRateMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRearGuardHeartRateMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F547089D20AEE0230038377B /* MyRearGuardHeartRateMonitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRearGuardHeartRateMonitorUITests.swift; sourceTree = "<group>"; };
 		F547089F20AEE0230038377B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F54708AE20AEE8E50038377B /* MyRearGuardHeartRateMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyRearGuardHeartRateMonitor.entitlements; sourceTree = "<group>"; };
+		F54708AF20AEE8EF0038377B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		F54708B920AF0E010038377B /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		F54708BB20AF0E2A0038377B /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
+		F54708C120AF0E980038377B /* MyRearGuardHeartMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRearGuardHeartMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54708D420AF0E990038377B /* MyRearGuardHeartMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRearGuardHeartMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54708DF20AF0E990038377B /* MyRearGuardHeartMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRearGuardHeartMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54708EF20B264ED0038377B /* ProfileDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
+		F54708F320B27B960038377B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F54708F520B281B40038377B /* UserHealthProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = "<group>"; };
+		F54708F720B284170038377B /* HKBiologicalSex+StringRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HKBiologicalSex+StringRepresentation.swift"; sourceTree = "<group>"; };
+		F54708F920B284240038377B /* HKBloodType+StringRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HKBloodType+StringRepresentation.swift"; sourceTree = "<group>"; };
+		F54708FB20B38E290038377B /* HeartBeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartBeatViewController.swift; sourceTree = "<group>"; };
+		F547090120B40FAD0038377B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F547090320B4134B0038377B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FB420A3CBEB25EB144C884C9 /* Pods-MyRearGuardHeartMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRearGuardHeartMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyRearGuardHeartMonitor/Pods-MyRearGuardHeartMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54708B020AEE8EF0038377B /* HealthKit.framework in Frameworks */,
+				CB5F644D702B09B00DCB2C3F /* Pods_MyRearGuardHeartRateMonitor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,9 +121,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F54708BE20AF0E980038377B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B5641FC7D9CE437AC9B15D /* Pods_MyRearGuardHeartMonitor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54708D120AF0E990038377B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54708DC20AF0E990038377B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7866F56DAA43F884E6C6CC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB420A3CBEB25EB144C884C9 /* Pods-MyRearGuardHeartMonitor.debug.xcconfig */,
+				2EFF508A32BE4FB0787BDF39 /* Pods-MyRearGuardHeartMonitor.release.xcconfig */,
+				69A3AF797C3620671D745808 /* Pods-MyRearGuardHeartRateMonitor.debug.xcconfig */,
+				DCF3DEA343424EF0136578E8 /* Pods-MyRearGuardHeartRateMonitor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F547087120AEE0220038377B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +164,8 @@
 				F547089120AEE0230038377B /* MyRearGuardHeartRateMonitorTests */,
 				F547089C20AEE0230038377B /* MyRearGuardHeartRateMonitorUITests */,
 				F547087B20AEE0220038377B /* Products */,
+				F54708AB20AEE8E50038377B /* Frameworks */,
+				C7866F56DAA43F884E6C6CC2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +175,9 @@
 				F547087A20AEE0220038377B /* MyRearGuardHeartRateMonitor.app */,
 				F547088E20AEE0230038377B /* MyRearGuardHeartRateMonitorTests.xctest */,
 				F547089920AEE0230038377B /* MyRearGuardHeartRateMonitorUITests.xctest */,
+				F54708C120AF0E980038377B /* MyRearGuardHeartMonitor.app */,
+				F54708D420AF0E990038377B /* MyRearGuardHeartMonitorTests.xctest */,
+				F54708DF20AF0E990038377B /* MyRearGuardHeartMonitorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,12 +185,23 @@
 		F547087C20AEE0220038377B /* MyRearGuardHeartRateMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				F54708AE20AEE8E50038377B /* MyRearGuardHeartRateMonitor.entitlements */,
 				F547087D20AEE0220038377B /* AppDelegate.swift */,
-				F547087F20AEE0220038377B /* ViewController.swift */,
+				F54708BB20AF0E2A0038377B /* HealthKitSetupAssistant.swift */,
+				F54708B920AF0E010038377B /* MasterViewController.swift */,
+				F54708F320B27B960038377B /* ProfileViewController.swift */,
+				F54708F920B284240038377B /* HKBloodType+StringRepresentation.swift */,
+				F54708F520B281B40038377B /* UserHealthProfile.swift */,
+				F54708F720B284170038377B /* HKBiologicalSex+StringRepresentation.swift */,
+				F54708EF20B264ED0038377B /* ProfileDataStore.swift */,
 				F547088120AEE0220038377B /* Main.storyboard */,
+				F54708FB20B38E290038377B /* HeartBeatViewController.swift */,
+				F543850120B46A44004F98AA /* SignInViewController.swift */,
 				F547088420AEE0230038377B /* Assets.xcassets */,
+				F547090320B4134B0038377B /* SignUpViewController.swift */,
 				F547088620AEE0230038377B /* LaunchScreen.storyboard */,
 				F547088920AEE0230038377B /* Info.plist */,
+				F547090120B40FAD0038377B /* GoogleService-Info.plist */,
 			);
 			path = MyRearGuardHeartRateMonitor;
 			sourceTree = "<group>";
@@ -125,6 +224,16 @@
 			path = MyRearGuardHeartRateMonitorUITests;
 			sourceTree = "<group>";
 		};
+		F54708AB20AEE8E50038377B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F54708AF20AEE8EF0038377B /* HealthKit.framework */,
+				2798EC9E3F069B82A320F04F /* Pods_MyRearGuardHeartMonitor.framework */,
+				8B61F00EBCE5D8031C996157 /* Pods_MyRearGuardHeartRateMonitor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F54708A220AEE0230038377B /* Build configuration list for PBXNativeTarget "MyRearGuardHeartRateMonitor" */;
 			buildPhases = (
+				4A0BF9254730C0E626731C7B /* [CP] Check Pods Manifest.lock */,
 				F547087620AEE0220038377B /* Sources */,
 				F547087720AEE0220038377B /* Frameworks */,
 				F547087820AEE0220038377B /* Resources */,
+				2BE41535273D82D475159279 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +292,61 @@
 			productReference = F547089920AEE0230038377B /* MyRearGuardHeartRateMonitorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F54708C020AF0E980038377B /* MyRearGuardHeartMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F54708E620AF0E9A0038377B /* Build configuration list for PBXNativeTarget "MyRearGuardHeartMonitor" */;
+			buildPhases = (
+				4FC278E66E7EEB9CAAED7D15 /* [CP] Check Pods Manifest.lock */,
+				F54708BD20AF0E980038377B /* Sources */,
+				F54708BE20AF0E980038377B /* Frameworks */,
+				F54708BF20AF0E980038377B /* Resources */,
+				30EBE7A6EC6CDE5B155F5E1C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyRearGuardHeartMonitor;
+			productName = MyRearGuardHeartMonitor;
+			productReference = F54708C120AF0E980038377B /* MyRearGuardHeartMonitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F54708D320AF0E990038377B /* MyRearGuardHeartMonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F54708E920AF0E9A0038377B /* Build configuration list for PBXNativeTarget "MyRearGuardHeartMonitorTests" */;
+			buildPhases = (
+				F54708D020AF0E990038377B /* Sources */,
+				F54708D120AF0E990038377B /* Frameworks */,
+				F54708D220AF0E990038377B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F54708D620AF0E990038377B /* PBXTargetDependency */,
+			);
+			name = MyRearGuardHeartMonitorTests;
+			productName = MyRearGuardHeartMonitorTests;
+			productReference = F54708D420AF0E990038377B /* MyRearGuardHeartMonitorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F54708DE20AF0E990038377B /* MyRearGuardHeartMonitorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F54708EC20AF0E9A0038377B /* Build configuration list for PBXNativeTarget "MyRearGuardHeartMonitorUITests" */;
+			buildPhases = (
+				F54708DB20AF0E990038377B /* Sources */,
+				F54708DC20AF0E990038377B /* Frameworks */,
+				F54708DD20AF0E990038377B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F54708E120AF0E9A0038377B /* PBXTargetDependency */,
+			);
+			name = MyRearGuardHeartMonitorUITests;
+			productName = MyRearGuardHeartMonitorUITests;
+			productReference = F54708DF20AF0E990038377B /* MyRearGuardHeartMonitorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,6 +359,11 @@
 				TargetAttributes = {
 					F547087920AEE0220038377B = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					F547088D20AEE0230038377B = {
 						CreatedOnToolsVersion = 9.3;
@@ -201,6 +372,17 @@
 					F547089820AEE0230038377B = {
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = F547087920AEE0220038377B;
+					};
+					F54708C020AF0E980038377B = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					F54708D320AF0E990038377B = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = F54708C020AF0E980038377B;
+					};
+					F54708DE20AF0E990038377B = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = F54708C020AF0E980038377B;
 					};
 				};
 			};
@@ -220,6 +402,9 @@
 				F547087920AEE0220038377B /* MyRearGuardHeartRateMonitor */,
 				F547088D20AEE0230038377B /* MyRearGuardHeartRateMonitorTests */,
 				F547089820AEE0230038377B /* MyRearGuardHeartRateMonitorUITests */,
+				F54708C020AF0E980038377B /* MyRearGuardHeartMonitor */,
+				F54708D320AF0E990038377B /* MyRearGuardHeartMonitorTests */,
+				F54708DE20AF0E990038377B /* MyRearGuardHeartMonitorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F547088820AEE0230038377B /* LaunchScreen.storyboard in Resources */,
+				F547090220B40FAD0038377B /* GoogleService-Info.plist in Resources */,
 				F547088520AEE0230038377B /* Assets.xcassets in Resources */,
 				F547088320AEE0220038377B /* Main.storyboard in Resources */,
 			);
@@ -249,14 +435,135 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F54708BF20AF0E980038377B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54708D220AF0E990038377B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54708DD20AF0E990038377B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BE41535273D82D475159279 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyRearGuardHeartRateMonitor/Pods-MyRearGuardHeartRateMonitor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyRearGuardHeartRateMonitor/Pods-MyRearGuardHeartRateMonitor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30EBE7A6EC6CDE5B155F5E1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyRearGuardHeartMonitor/Pods-MyRearGuardHeartMonitor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyRearGuardHeartMonitor/Pods-MyRearGuardHeartMonitor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A0BF9254730C0E626731C7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyRearGuardHeartRateMonitor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FC278E66E7EEB9CAAED7D15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyRearGuardHeartMonitor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F547087620AEE0220038377B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F547088020AEE0220038377B /* ViewController.swift in Sources */,
+				F543850220B46A44004F98AA /* SignInViewController.swift in Sources */,
+				F547090420B4134B0038377B /* SignUpViewController.swift in Sources */,
+				F54708F620B281B50038377B /* UserHealthProfile.swift in Sources */,
+				F54708F420B27B960038377B /* ProfileViewController.swift in Sources */,
+				F54708F820B284170038377B /* HKBiologicalSex+StringRepresentation.swift in Sources */,
+				F54708BA20AF0E010038377B /* MasterViewController.swift in Sources */,
+				F54708F020B264ED0038377B /* ProfileDataStore.swift in Sources */,
+				F54708BC20AF0E2A0038377B /* HealthKitSetupAssistant.swift in Sources */,
+				F54708FC20B38E290038377B /* HeartBeatViewController.swift in Sources */,
+				F54708FA20B284240038377B /* HKBloodType+StringRepresentation.swift in Sources */,
 				F547087E20AEE0220038377B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +584,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F54708BD20AF0E980038377B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54708D020AF0E990038377B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54708DB20AF0E990038377B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +617,16 @@
 			isa = PBXTargetDependency;
 			target = F547087920AEE0220038377B /* MyRearGuardHeartRateMonitor */;
 			targetProxy = F547089A20AEE0230038377B /* PBXContainerItemProxy */;
+		};
+		F54708D620AF0E990038377B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F54708C020AF0E980038377B /* MyRearGuardHeartMonitor */;
+			targetProxy = F54708D520AF0E990038377B /* PBXContainerItemProxy */;
+		};
+		F54708E120AF0E9A0038377B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F54708C020AF0E980038377B /* MyRearGuardHeartMonitor */;
+			targetProxy = F54708E020AF0E9A0038377B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -428,15 +766,18 @@
 		};
 		F54708A320AEE0230038377B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69A3AF797C3620671D745808 /* Pods-MyRearGuardHeartRateMonitor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyRearGuardHeartRateMonitor/MyRearGuardHeartRateMonitor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RA47K2Q59;
 				INFOPLIST_FILE = MyRearGuardHeartRateMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.myrearguard.MyRearGuardHeartRateMonitor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myrearguard.MyRearGuard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -445,15 +786,18 @@
 		};
 		F54708A420AEE0230038377B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCF3DEA343424EF0136578E8 /* Pods-MyRearGuardHeartRateMonitor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyRearGuardHeartRateMonitor/MyRearGuardHeartRateMonitor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RA47K2Q59;
 				INFOPLIST_FILE = MyRearGuardHeartRateMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.myrearguard.MyRearGuardHeartRateMonitor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myrearguard.MyRearGuard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,6 +882,122 @@
 			};
 			name = Release;
 		};
+		F54708E720AF0E9A0038377B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB420A3CBEB25EB144C884C9 /* Pods-MyRearGuardHeartMonitor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RA47K2Q59;
+				INFOPLIST_FILE = MyRearGuardHeartMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myrearguard.MyRearGuardHeartMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F54708E820AF0E9A0038377B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EFF508A32BE4FB0787BDF39 /* Pods-MyRearGuardHeartMonitor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RA47K2Q59;
+				INFOPLIST_FILE = MyRearGuardHeartMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myrearguard.MyRearGuardHeartMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F54708EA20AF0E9A0038377B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RA47K2Q59;
+				INFOPLIST_FILE = MyRearGuardHeartMonitorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myrearguard.MyRearGuardHeartMonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyRearGuardHeartMonitor.app/MyRearGuardHeartMonitor";
+			};
+			name = Debug;
+		};
+		F54708EB20AF0E9A0038377B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RA47K2Q59;
+				INFOPLIST_FILE = MyRearGuardHeartMonitorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myrearguard.MyRearGuardHeartMonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyRearGuardHeartMonitor.app/MyRearGuardHeartMonitor";
+			};
+			name = Release;
+		};
+		F54708ED20AF0E9A0038377B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RA47K2Q59;
+				INFOPLIST_FILE = MyRearGuardHeartMonitorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myrearguard.MyRearGuardHeartMonitorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyRearGuardHeartMonitor;
+			};
+			name = Debug;
+		};
+		F54708EE20AF0E9A0038377B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RA47K2Q59;
+				INFOPLIST_FILE = MyRearGuardHeartMonitorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myrearguard.MyRearGuardHeartMonitorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyRearGuardHeartMonitor;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -573,6 +1033,33 @@
 			buildConfigurations = (
 				F54708A920AEE0230038377B /* Debug */,
 				F54708AA20AEE0230038377B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F54708E620AF0E9A0038377B /* Build configuration list for PBXNativeTarget "MyRearGuardHeartMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54708E720AF0E9A0038377B /* Debug */,
+				F54708E820AF0E9A0038377B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F54708E920AF0E9A0038377B /* Build configuration list for PBXNativeTarget "MyRearGuardHeartMonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54708EA20AF0E9A0038377B /* Debug */,
+				F54708EB20AF0E9A0038377B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F54708EC20AF0E9A0038377B /* Build configuration list for PBXNativeTarget "MyRearGuardHeartMonitorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54708ED20AF0E9A0038377B /* Debug */,
+				F54708EE20AF0E9A0038377B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

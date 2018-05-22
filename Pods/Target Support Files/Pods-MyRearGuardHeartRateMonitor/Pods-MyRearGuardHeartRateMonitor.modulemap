@@ -1,0 +1,6 @@
+framework module Pods_MyRearGuardHeartRateMonitor {
+  umbrella header "Pods-MyRearGuardHeartRateMonitor-umbrella.h"
+
+  export *
+  module * { export * }
+}
