@@ -11,12 +11,27 @@ import HealthKit
 
 class ProfileViewController: UITableViewController {
     
+    var emailfromMaster = String()
+    var sendEmailback: String?
+    
   private enum ProfileSection: Int {
     case ageSexBloodType
     case weightHeightBMI
     case readHealthKitData
     case saveBMI
   }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "backfromprofileSegue") {
+            let PatientInfo = segue.destination as! MasterViewController
+            PatientInfo._emailID = "\(sendEmailback!)"
+            
+            
+        }
+        
+        
+    }
   
   private enum ProfileDataError: Error {
     
@@ -141,17 +156,18 @@ class ProfileViewController: UITableViewController {
       self.updateLabels()
     }
   }
-  
-  private func saveBodyMassIndexToHealthKit() {
-    
-    guard let bodyMassIndex = userHealthProfile.bodyMassIndex else {
-      displayAlert(for: ProfileDataError.missingBodyMassIndex)
-      return
+    private func saveBodyMassIndexToHealthKit() {
+        
+        guard let bodyMassIndex = userHealthProfile.bodyMassIndex else {
+            displayAlert(for: ProfileDataError.missingBodyMassIndex)
+            return
+        }
+        
+        ProfileDataStore.saveBodyMassIndexSample(bodyMassIndex: bodyMassIndex,
+                                                 date: Date()) 
     }
-    
-    ProfileDataStore.saveBodyMassIndexSample(bodyMassIndex: bodyMassIndex,
-                                             date: Date())
-  }
+  
+ 
   
   private func displayAlert(for error: Error) {
     
@@ -175,10 +191,15 @@ class ProfileViewController: UITableViewController {
     
     switch section {
     case .saveBMI:
-      saveBodyMassIndexToHealthKit()
+        saveBodyMassIndexToHealthKit()
     case .readHealthKitData:
       updateHealthInfo()
     default: break
     }
   }
+    override func viewDidLoad() {
+        
+        sendEmailback = emailfromMaster
+        
+    }
 }

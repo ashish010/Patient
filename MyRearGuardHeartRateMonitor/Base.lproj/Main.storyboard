@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W8y-kw-1O4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u2b-4g-Q1D">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,26 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="YHz-Bk-A1c">
-            <objects>
-                <navigationController id="W8y-kw-1O4" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bTU-Pl-2St">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="u2b-4g-Q1D" kind="relationship" relationship="rootViewController" id="moR-sB-rnQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MxK-qZ-tkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-772" y="134"/>
-        </scene>
-        <!--Master View Controller-->
+        <!--MasterView-->
         <scene sceneID="r0Y-Io-2B4">
             <objects>
-                <tableViewController id="IBv-1Z-8bA" customClass="MasterViewController" customModule="MyRearGuardHeartRateMonitor" sceneMemberID="viewController">
+                <tableViewController title="MasterView" id="IBv-1Z-8bA" customClass="MasterViewController" customModule="MyRearGuardHeartRateMonitor" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="azK-k0-a2h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Profile and BMI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oZs-5X-ng3">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Profile and BMI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oZs-5X-ng3">
                                                     <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -55,7 +39,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="vev-Pg-eQA" kind="show" id="dX1-CB-1ZV"/>
+                                            <segue destination="vev-Pg-eQA" kind="show" identifier="profileSegue" id="dX1-CB-1ZV"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -69,7 +53,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Contact Health Professionals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qTA-jA-fn3">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Calculate Heart Beat Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qTA-jA-fn3">
                                                     <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -80,6 +64,9 @@
                                             <color key="tintColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="bUg-rU-cbH" kind="show" identifier="segueheart" id="e98-mO-YMb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -115,20 +102,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Calculate Heart Beat Rate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HO9-5A-KHE">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Log Out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HO9-5A-KHE">
                                                     <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </subviews>
                                             <color key="tintColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="bUg-rU-cbH" kind="show" identifier="segueheart" id="QIx-AW-Wn4"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -139,6 +123,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="LQd-n4-asa"/>
+                    <connections>
+                        <segue destination="u2b-4g-Q1D" kind="show" identifier="logoutSegue" id="2IY-Ui-JCr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IK-md-BcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,34 +139,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Heart beat rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-H5-zPO">
-                                <rect key="frame" x="66" y="162" width="243" height="172"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKD-3W-yRn">
-                                <rect key="frame" x="66" y="398" width="243" height="30"/>
+                                <rect key="frame" x="0.0" y="495" width="375" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Report Incident"/>
                                 <connections>
                                     <action selector="ReportIncident:" destination="bUg-rU-cbH" eventType="touchUpInside" id="83N-r5-agf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuO-gM-98d">
-                                <rect key="frame" x="110" y="517" width="98" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Heart beat rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-H5-zPO">
+                                <rect key="frame" x="66" y="58" width="243" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSD-Qm-z35">
+                                <rect key="frame" x="0.0" y="20" width="91" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="IBv-1Z-8bA" kind="show" identifier="backfromheartbeatSegue" id="Lj8-e6-8Ix"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IWb-tS-bjP"/>
                     </view>
                     <connections>
-                        <outlet property="Test" destination="vuO-gM-98d" id="tKh-eZ-XsP"/>
+                        <outlet property="HeartRateLabel" destination="Uge-H5-zPO" id="f95-0V-qkh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2Q-ra-jX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -371,8 +359,31 @@
                             <tableViewSection headerTitle="" id="Hyg-eA-ZAL" userLabel="Read Data">
                                 <cells/>
                             </tableViewSection>
+                            <tableViewSection headerTitle="" id="qMY-Vo-pZW" userLabel="Read Data">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yaM-fq-inm">
+                                        <rect key="frame" x="0.0" y="471.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yaM-fq-inm" id="T5j-iC-Nht">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXF-Kx-PgZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Cancel"/>
+                                                    <connections>
+                                                        <segue destination="IBv-1Z-8bA" kind="show" identifier="backfromprofileSegue" id="uaw-H9-4rI"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="U12-sd-Xkj"/>
                     <connections>
                         <outlet property="ageLabel" destination="4Tc-Pf-rkO" id="1Yu-r6-Arr"/>
                         <outlet property="biologicalSexLabel" destination="gUO-F8-cp4" id="BAf-Ck-RXd"/>
@@ -384,7 +395,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Maq-0F-C6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1218" y="134"/>
+            <point key="canvasLocation" x="1965.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="29d-gG-CoZ">
@@ -429,6 +440,13 @@
                                     <segue destination="UaZ-y0-pzh" kind="show" id="jkh-Xz-VyT"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqm-P6-CQx">
+                                <rect key="frame" x="100" y="626" width="201" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dYH-Qq-Pz7"/>
@@ -437,12 +455,14 @@
                     <connections>
                         <outlet property="Password" destination="E04-Q6-SxW" id="sAX-A6-1XG"/>
                         <outlet property="Username" destination="lBM-t6-CJz" id="1bI-UU-tRH"/>
-                        <segue destination="IBv-1Z-8bA" kind="show" identifier="segue2" id="xpV-vE-m7U"/>
+                        <outlet property="secret" destination="Dqm-P6-CQx" id="r0O-xe-HZC"/>
+                        <outlet property="signupbtn" destination="SIy-Jc-t2a" id="Pb3-iE-KbP"/>
+                        <segue destination="IBv-1Z-8bA" kind="show" identifier="loginSegue" id="xpV-vE-m7U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjw-cb-SBZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-735" y="1079"/>
+            <point key="canvasLocation" x="-735.20000000000005" y="1078.1109445277361"/>
         </scene>
         <!--SignUpViewController-->
         <scene sceneID="kns-vd-YHb">
@@ -517,6 +537,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbd-53-MWx">
+                                <rect key="frame" x="0.0" y="20" width="91" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="u2b-4g-Q1D" kind="show" id="2VU-v8-Gta"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3Dd-6E-kaC"/>
@@ -531,19 +559,19 @@
                         <outlet property="LastName" destination="zIt-Jc-fWP" id="VHi-Ba-j6N"/>
                         <outlet property="NewPassword" destination="CyO-so-jkJ" id="Vxb-gt-nwb"/>
                         <outlet property="PhoneNumber" destination="Hlg-fi-yOl" id="MiW-30-Hl7"/>
-                        <segue destination="u2b-4g-Q1D" kind="show" identifier="segue" id="HTd-Vq-WPV"/>
+                        <segue destination="u2b-4g-Q1D" kind="show" identifier="segueSignUp" id="HTd-Vq-WPV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLB-jd-hmv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="524" y="1592"/>
+            <point key="canvasLocation" x="448.80000000000001" y="1104.1979010494754"/>
         </scene>
     </scenes>
     <resources>
         <image name="logo" width="414" height="322"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jkh-Xz-VyT"/>
-        <segue reference="HTd-Vq-WPV"/>
+        <segue reference="2IY-Ui-JCr"/>
+        <segue reference="Lj8-e6-8Ix"/>
     </inferredMetricsTieBreakers>
 </document>

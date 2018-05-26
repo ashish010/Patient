@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		09B5641FC7D9CE437AC9B15D /* Pods_MyRearGuardHeartMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2798EC9E3F069B82A320F04F /* Pods_MyRearGuardHeartMonitor.framework */; };
 		CB5F644D702B09B00DCB2C3F /* Pods_MyRearGuardHeartRateMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B61F00EBCE5D8031C996157 /* Pods_MyRearGuardHeartRateMonitor.framework */; };
+		F505DE7020B6EEDA00FE3B4D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F505DE6F20B6EEDA00FE3B4D /* Default-568h@2x.png */; };
 		F543850220B46A44004F98AA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F543850120B46A44004F98AA /* SignInViewController.swift */; };
+		F543850420B6C1A4004F98AA /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F543850320B6C1A4004F98AA /* Patient.swift */; };
 		F547087E20AEE0220038377B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F547087D20AEE0220038377B /* AppDelegate.swift */; };
 		F547088320AEE0220038377B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F547088120AEE0220038377B /* Main.storyboard */; };
 		F547088520AEE0230038377B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F547088420AEE0230038377B /* Assets.xcassets */; };
@@ -66,7 +68,9 @@
 		69A3AF797C3620671D745808 /* Pods-MyRearGuardHeartRateMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRearGuardHeartRateMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyRearGuardHeartRateMonitor/Pods-MyRearGuardHeartRateMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		8B61F00EBCE5D8031C996157 /* Pods_MyRearGuardHeartRateMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyRearGuardHeartRateMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF3DEA343424EF0136578E8 /* Pods-MyRearGuardHeartRateMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRearGuardHeartRateMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyRearGuardHeartRateMonitor/Pods-MyRearGuardHeartRateMonitor.release.xcconfig"; sourceTree = "<group>"; };
+		F505DE6F20B6EEDA00FE3B4D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F543850120B46A44004F98AA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F543850320B6C1A4004F98AA /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		F547087A20AEE0220038377B /* MyRearGuardHeartRateMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRearGuardHeartRateMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F547087D20AEE0220038377B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F547088220AEE0220038377B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 		F547087120AEE0220038377B = {
 			isa = PBXGroup;
 			children = (
+				F505DE6F20B6EEDA00FE3B4D /* Default-568h@2x.png */,
 				F547087C20AEE0220038377B /* MyRearGuardHeartRateMonitor */,
 				F547089120AEE0230038377B /* MyRearGuardHeartRateMonitorTests */,
 				F547089C20AEE0230038377B /* MyRearGuardHeartRateMonitorUITests */,
@@ -196,6 +201,7 @@
 				F54708EF20B264ED0038377B /* ProfileDataStore.swift */,
 				F547088120AEE0220038377B /* Main.storyboard */,
 				F54708FB20B38E290038377B /* HeartBeatViewController.swift */,
+				F543850320B6C1A4004F98AA /* Patient.swift */,
 				F543850120B46A44004F98AA /* SignInViewController.swift */,
 				F547088420AEE0230038377B /* Assets.xcassets */,
 				F547090320B4134B0038377B /* SignUpViewController.swift */,
@@ -439,6 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F505DE7020B6EEDA00FE3B4D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +563,7 @@
 			files = (
 				F543850220B46A44004F98AA /* SignInViewController.swift in Sources */,
 				F547090420B4134B0038377B /* SignUpViewController.swift in Sources */,
+				F543850420B6C1A4004F98AA /* Patient.swift in Sources */,
 				F54708F620B281B50038377B /* UserHealthProfile.swift in Sources */,
 				F54708F420B27B960038377B /* ProfileViewController.swift in Sources */,
 				F54708F820B284170038377B /* HKBiologicalSex+StringRepresentation.swift in Sources */,

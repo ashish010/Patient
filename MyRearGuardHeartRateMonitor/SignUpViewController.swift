@@ -49,55 +49,50 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var RegisterButtonLabel: UIButton!
     
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let PatientInf = segue.destination as! MasterViewController
-        PatientInf.emailID = "\(Username.text!)"
-        
-    }*/
-    /*@IBAction func LogIn(_ sender: UIButton) {
-        if (Username.text != "" && Password.text != ""){
-            Auth.auth().signIn(withEmail: Username.text!, password: Password.text!, completion: {(user, error) in
-                if user != nil {
-                    
-                    self.performSegue(withIdentifier: "segue2", sender: self)
-                }
-                else{
-                    if let Error = error?.localizedDescription{
-                        print (Error)
-                    }else{
-                        
-                    }
-                }
-            })
-        }
-        
-    }*/
     
-    /* func addActive()-> Void
-     {
-     db = Database.database().reference()
-     let ref = db?.child("actives").child("active").queryLimited(toLast: 1)
-     self.handle = ref?.observe(.childAdded, with: { (snapshot) in
-     if let val = snapshot.key as? String{
-     let medic = Medic(indexNumber: Int(val)!)
-     medic.indexNumber = medic.indexNumber+1
-     self.db?.child("actives").child("active").child("\(String(medic.indexNumber))").child("email").setValue(self.email.text)
-     self.db?.child("actives").child("active").child("\(String(medic.indexNumber))").child("working").setValue(false)
-     ref?.removeAllObservers()
-     
-     
-     ///////
-     self.handle = ref?.observe(DataEventType.value, with: { (snapshot) in
-     let val = snapshot.value as? [String : AnyObject] ?? [:]
-     var piid : Int?
-     if ((val ["patients"]) != nil){
-     print (val["patients"]!["patient"])
-     }
-     
-     })
-     }
-     })
-     }*/
+        
+    
+    
+    
+   
+    func addPatient()-> Void{
+        db = Database.database().reference()
+        let ref = db?.child("patients").child("patient").queryLimited(toLast: 1)
+        self.handle = ref?.observe(.childAdded, with: {(snapshot) in
+            if let val = snapshot.key as? String {
+                let patient = Patient(indexNumber: Int(val)!)
+                patient.indexNumber = patient.indexNumber + 1
+                
+                self.db?.child("patients").child("patient").child("\(String(patient.indexNumber))").child("Age").setValue(self.Age.text)
+                self.db?.child("patients").child("patient").child("\(String(patient.indexNumber))").child("First Name").setValue(self.FirstName.text)
+                self.db?.child("patients").child("patient").child("\(String(patient.indexNumber))").child("Last Name").setValue(self.LastName.text)
+                self.db?.child("patients").child("patient").child("\(String(patient.indexNumber))").child("Gender").setValue(self.Gender.text)
+                self.db?.child("patients").child("patient").child("\(String(patient.indexNumber))").child("Email").setValue(self.Email.text)
+                
+                
+                
+                ref?.removeAllObservers()
+            }
+        })
+    }
+    func addMonitor(_activeEmail: String, _isOn: String) -> Void {
+        db = Database.database().reference()
+        let ref = db?.child("monitors").child("monitor").queryLimited(toLast: 1)
+        self.handle = ref?.observe(.childAdded, with: { (snapshot) in
+            if let val = snapshot.key as? String{
+                let monitorActive = Patient(indexNumber: Int(val)!)
+                monitorActive.indexNumber = monitorActive.indexNumber+1
+                
+             
+                self.db?.child("monitors").child("monitor").child("\(String(monitorActive.indexNumber))").child("Email").setValue(_activeEmail)
+                
+                self.db?.child("monitors").child("monitor").child("\(String(monitorActive.indexNumber))").child("IsOn").setValue(_isOn)
+                ref?.removeAllObservers()
+            }
+            
+        })
+        
+    }
     
 
     @IBAction func Register(_ sender: UIButton) {
@@ -107,19 +102,9 @@ class SignUpViewController: UIViewController {
                 if user != nil {
                     if(self.NewPassword.text == self.ConfirmPassword.text){
                         
-                        let user = Auth.auth().currentUser
-                        self.handle = self.ref?.child("patients").child("patient").child((user?.uid)!).observe(.childAdded, with: { (snapshot) in
-                            
-                            if let child = snapshot.value as? String{
-                                
-                                
-                                
-                                
-                            }
-                        })
-                        var index: Int = 3
-                        self.ref?.child("patients").child ("patient").child(String (index + 1)).setValue(["First Name": self.FirstName.text, "Last Name": self.LastName.text, "Gender":self.Gender.text, "Email":self.Email.text, "Age": (self.Age.text)])
-                        self.performSegue(withIdentifier: "segue", sender: self)
+                        self.addPatient()
+                        self.addMonitor(_activeEmail: self.Email.text!,_isOn: "0")
+                        self.performSegue(withIdentifier: "segueSignUp", sender: self)
                         
                     }
                 }
@@ -135,38 +120,8 @@ class SignUpViewController: UIViewController {
         }
     }
 }
-    /*
-     {
-     let email = self.Username.text
-     let password = self.Password.text
-     
-     let credential = EmailAuthProvider.credential(withEmail: email!, password: password!)
-     
-     if (self.Username.text != nil && self.Password.text != nil){
-     Auth.auth().createUser(withEmail : email!, password : password!, completion :{
-     (user, error) in
-     
-     if(error == nil){
-     let uid = Auth.auth()
-     
-     self.userID = user?.uid
-     
-     KeychainWrapper.standard.set(self.userID, forKey: "uid")
-     
-     //self.performSegue(withIdentifier: "MainView", sender: nil)
-     
-     }
-     
-     else{
-     
-     print("error xxd")
-     
-     }
-     
-     })
-     
-     }
-     }*/
+
+
     
     
 
